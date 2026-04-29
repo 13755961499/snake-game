@@ -1,0 +1,119 @@
+:root {
+    --bg-color: #1a1a2e;
+    --canvas-bg: #16213e;
+    --snake-head: #4ecca3;
+    --snake-body: #45b293;
+    --food-color: #e94560;
+    --text-color: #eeeeee;
+    --accent-color: #0f3460;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    text-align: center;
+    background-color: var(--accent-color);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    margin: 0 0 1rem 0;
+    font-size: 2.5rem;
+    color: var(--snake-head);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.score-item span {
+    color: var(--snake-head);
+}
+
+.canvas-wrapper {
+    position: relative;
+    border: 4px solid #0f3460;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--canvas-bg);
+    line-height: 0;
+}
+
+#gameCanvas {
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.overlay.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.overlay-content {
+    background-color: var(--accent-color);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid var(--snake-head);
+}
+
+.overlay-content h2 {
+    margin-top: 0;
+    color: var(--snake-head);
+}
+
+#startBtn {
+    background-color: var(--snake-head);
+    color: var(--bg-color);
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#startBtn:hover {
+    background-color: #3db892;
+    transform: scale(1.05);
+}
+
+.controls-info {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.controls-info strong {
+    color: var(--text-color);
+}

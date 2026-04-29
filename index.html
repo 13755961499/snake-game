@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>经典贪吃蛇 - Canvas版</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="game-container">
+        <header>
+            <h1>经典贪吃蛇</h1>
+            <div class="score-board">
+                <div class="score-item">分数: <span id="currentScore">0</span></div>
+                <div class="score-item">最高分: <span id="highScore">0</span></div>
+            </div>
+        </header>
+
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div id="gameOverlay" class="overlay">
+                <div class="overlay-content">
+                    <h2 id="overlayTitle">游戏开始</h2>
+                    <p id="overlayMessage">按空格键开始/暂停</p>
+                    <button id="startBtn">开始游戏</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls-info">
+            <p>使用 <strong>方向键</strong> 或 <strong>WASD</strong> 控制移动</p>
+            <p>按 <strong>空格键</strong> 暂停/恢复</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
