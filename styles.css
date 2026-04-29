@@ -61,6 +61,17 @@ header h1 {
     display: block;
 }
 
+#gameCanvas.shake {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -89,6 +100,29 @@ header h1 {
 .overlay-content h2 {
     margin-top: 0;
     color: var(--snake-head);
+}
+
+.difficulty-selection {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.diff-btn {
+    background: transparent;
+    border: 2px solid var(--snake-head);
+    color: var(--snake-head);
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.diff-btn.active, .diff-btn:hover {
+    background: var(--snake-head);
+    color: var(--bg-color);
 }
 
 #startBtn {

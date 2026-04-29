@@ -21,15 +21,22 @@
             <canvas id="gameCanvas" width="400" height="400"></canvas>
             <div id="gameOverlay" class="overlay">
                 <div class="overlay-content">
-                    <h2 id="overlayTitle">游戏开始</h2>
-                    <p id="overlayMessage">按空格键开始/暂停</p>
+                    <h2 id="overlayTitle">经典贪吃蛇</h2>
+                    <p id="overlayMessage">请选择难度开始游戏</p>
+                    
+                    <div class="difficulty-selection">
+                        <button class="diff-btn" data-speed="200">简单</button>
+                        <button class="diff-btn active" data-speed="150">普通</button>
+                        <button class="diff-btn" data-speed="100">困难</button>
+                    </div>
+
                     <button id="startBtn">开始游戏</button>
                 </div>
             </div>
         </div>
 
         <div class="controls-info">
-            <p>使用 <strong>方向键</strong> 或 <strong>WASD</strong> 控制移动</p>
+            <p>使用 <strong>方向键/WASD</strong> 或 <strong>滑动屏幕</strong> 移动</p>
             <p>按 <strong>空格键</strong> 暂停/恢复</p>
         </div>
     </div>
